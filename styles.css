@@ -1,0 +1,104 @@
+:root {
+	--card-width1: 240px;
+	--card-height1: 336px;
+	--background-color1: #A686C6;
+	--card-color1: #E6F6E6;
+	--suit1: #b62626;
+	--suit2: #060606;
+	--shadow-color1: rgba(66, 66, 66, 0.66);
+}
+
+* {
+	box-sizing: border-box;
+	font-family: 'Franklin Gothic Light', 'Arial Narrow', Arial, sans-serif;
+	font-size: 32px;
+	font-weight: 100;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: var(--background-color1);
+}
+
+h1 {
+	font-size: 1.6rem;
+	text-align: center;
+	font-weight: 1000;
+	padding-top: 0.6rem;
+	padding-bottom: 1.1rem;
+}
+
+h1,
+h2,
+h3 {
+	font-family: Garamond, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+p {
+	font-size: 0.6rem;
+	font-weight: 100;
+	font-style: oblique;
+}
+
+#playing-cards {
+	display: flex;
+	flex-wrap: wrap-reverse;
+	justify-content: center;
+	gap: 20px;
+}
+
+.flipped {
+	transform: rotate(180deg);
+}
+
+.card {
+	display: flex;
+	justify-content: space-between;
+	background-color: var(--card-color1);
+	min-width: 240px;
+	min-height: 336px;
+	border-radius: 10px;
+	box-shadow: -11px 6px 6px var(--shadow-color1);
+}
+
+.left {
+	align-self: flex-start;
+	margin-left: 0.6rem;
+	padding-top: 0.6rem;
+}
+
+.middle {
+	height: 100%;
+	align-self: center;
+	display: flex;
+	flex-direction: column;
+}
+
+.right {
+	align-self: flex-end;
+	margin-right: 0.6rem;
+	padding-top: 0.6rem;
+}
+
+.d-suit,
+.d-num,
+.h-suit,
+.h-num {
+	color: var(--suit1);
+}
+
+.s-suit,
+.s-num,
+.c-suit,
+.c-num {
+	color: var(--suit2);
+}
+
+.d-suit,
+.h-suit,
+.s-suit,
+.c-suit {
+	font-size: 0.96rem;
+	text-align: center;
+}
